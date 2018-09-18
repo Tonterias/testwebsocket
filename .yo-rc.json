@@ -1,0 +1,32 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.testwebsocket.web"
+    },
+    "jhipsterVersion": "5.3.4",
+    "applicationType": "monolith",
+    "baseName": "testwebsocket",
+    "packageName": "com.testwebsocket.web",
+    "packageFolder": "com/testwebsocket/web",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "ehcache",
+    "enableHibernateCache": true,
+    "websocket": "spring-websocket",
+    "databaseType": "sql",
+    "devDatabaseType": "h2Disk",
+    "prodDatabaseType": "mysql",
+    "searchEngine": false,
+    "messageBroker": false,
+    "serviceDiscoveryType": false,
+    "buildTool": "gradle",
+    "enableSwaggerCodegen": false,
+    "jwtSecretKey": "MTBjNWRmNzA1MDQ1ZjhlYjM1N2QxMjM2OWQ0OWI0ZmZhYWI0YWNiMWU0MGVkOGRiZjc2YTA5MGRjMWQyOTgwNTNlYWZjZWY4YWM0YzM3Y2QwZTAxZmM4ZmRiYmM2MWJmNmM1ZmVkY2U1MjAyZjUyNDQ4OTRlYjFmMWQ5MGE2MDI=",
+    "clientFramework": "angularX",
+    "useSass": false,
+    "clientPackageManager": "npm",
+    "testFrameworks": [],
+    "jhiPrefix": "jhi",
+    "enableTranslation": false
+  }
+}
