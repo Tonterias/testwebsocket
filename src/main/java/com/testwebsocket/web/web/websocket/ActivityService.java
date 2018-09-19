@@ -34,7 +34,18 @@ public class ActivityService implements ApplicationListener<SessionDisconnectEve
         activityDTO.setSessionId(stompHeaderAccessor.getSessionId());
         activityDTO.setIpAddress(stompHeaderAccessor.getSessionAttributes().get(IP_ADDRESS).toString());
         activityDTO.setTime(Instant.now());
-        log.debug("Sending user tracking data {}", activityDTO);
+        log.debug("*******************-------------------------Sending user tracking data {}", activityDTO);
+        return activityDTO;
+    }
+
+    @MessageMapping("/msj")
+    @SendTo("/topic/msj")
+    public ActivityDTO sendMensaje(@Payload ActivityDTO activityDTO, StompHeaderAccessor stompHeaderAccessor, Principal principal) {
+        activityDTO.setUserLogin(principal.getName());
+        activityDTO.setSessionId(stompHeaderAccessor.getSessionId());
+        activityDTO.setIpAddress(stompHeaderAccessor.getSessionAttributes().get(IP_ADDRESS).toString());
+        activityDTO.setTime(Instant.now());
+        log.debug("////////////////////-------------------------Sending user tracking data {}", activityDTO);
         return activityDTO;
     }
 

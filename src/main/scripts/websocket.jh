@@ -1,0 +1,22 @@
+
+entity Message {
+    creationDate Instant required
+    messageText String minlength(2) maxlength(8000) required
+    isDeliverd Boolean
+}
+
+relationship OneToMany {
+    User{message} to Message{user(id}
+}
+
+// SET PAGINATION OPTIONS:
+paginate all with infinite-scroll
+
+// SET SERVICE OPTIONS:
+service all with serviceImpl
+
+// DTO:
+dto all with mapstruct
+
+// FILTERING:
+filter *
